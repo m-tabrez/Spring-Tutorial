@@ -7,10 +7,21 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <!-- Define your beans here -->
+    <!-- Define your beans here 
     <bean id="employee" class="com.springTutorial.one.Employee">
     	<constructor-arg name="empId" value="101"></constructor-arg>
     	<constructor-arg name="empName" value="Tabrez"></constructor-arg>
+    </bean>-->
+    
+    <bean id="sportType" class="com.springTutorial.setterInjection.SportType">
+    	<property name="type" value="Indoor" />
+    	<property name="isAthlete" value="false" />
+    </bean>
+    
+    <bean id="cricket" class="com.springTutorial.setterInjection.Sport">
+    	<property name="sportId" value="201" />
+    	<property name="sportName" value="Cricket" />
+    	<property name="type" ref="sportType" />
     </bean>
     
 </beans>
