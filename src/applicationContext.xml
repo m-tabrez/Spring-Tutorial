@@ -7,6 +7,9 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
 
+	<!-- load the properties file -->
+	<context:property-placeholder location="classpath*:values.properties"/>
+	
     <!-- Define your beans here 
     <bean id="employee" class="com.springTutorial.one.Employee">
     	<constructor-arg name="empId" value="101"></constructor-arg>
@@ -22,6 +25,12 @@
     	<property name="sportId" value="201" />
     	<property name="sportName" value="Cricket" />
     	<property name="type" ref="sportType" />
+    </bean>
+    
+    <bean id="coach" class="com.springTutorial.activityOne.Coach">
+    	<property name="name" value="${vals.name}" />
+    	<property name="email" value="${vals.email}" />
+    	<property name="gender" value="${vals.gender}" />
     </bean>
     
 </beans>
