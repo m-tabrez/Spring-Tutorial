@@ -2,11 +2,14 @@ package com.springTutorial.activityFive;
 
 import java.util.Random;
 
+import org.springframework.beans.factory.annotation.Value;
+
 import com.sprintTutorial.annotationAutowired.Management;
 
 public class Principal implements Management {
 
-	private String[] rules = { "Wake up early", "Dress Properly", "Bath Cleanly", "Ear Breakfase" };
+	@Value("${vals.rules}")
+	private String[] rules;
 
 	Random r = new Random();
 
